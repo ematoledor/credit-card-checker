@@ -42,3 +42,21 @@ function validateCredz(arr) {
 
 console.log(validateCred(valid1));
 console.log(validateCred(invalid1));
+
+function findInvalidCards(cards) {
+  const invalid = [];
+  
+  for (let i = 0; i < cards.length; i++) {
+    let currCred = cards[i];
+    if (!validateCred(currCred)) {
+      invalid.push(currCred);
+    }
+  }
+  
+  return invalid;
+  }
+  
+  console.log(findInvalidCards([valid1, valid2, valid3, valid4, valid5]));
+  console.log(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5]));
+  
+  console.log(findInvalidCards(batch));
