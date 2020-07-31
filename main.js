@@ -92,6 +92,6 @@ function idInvalidCardCompanies(invalidBatch) {
   return companies;
   }
 
-console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
-console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
-console.log(idInvalidCardCompanies(batch));
+// console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
+// console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
+// console.log(idInvalidCardCompanies(batch));
