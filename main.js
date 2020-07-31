@@ -60,3 +60,34 @@ function findInvalidCards(cards) {
   console.log(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5]));
   
   console.log(findInvalidCards(batch));
+
+function idInvalidCardCompanies(invalidBatch) {
+  const companies = [];
+  for (let i = 0; i < invalidBatch.length; i++) {
+    switch (invalidBatch[i][0]) {
+      case 3:
+        if (companies.indexOf('Amex') === -1) {
+          companies.push('Amex');
+        }
+        break
+      case 4:
+        if (companies.indexOf('Visa') === -1) {
+          companies.push('Visa');
+        }
+        break
+      case 5:
+        if (companies.indexOf('Mastercard') === -1) {
+          companies.push('Mastercard');
+        }
+        break
+      case 6:
+        if (companies.indexOf('Discover') === -1) {
+          companies.push('Discover');
+        }
+        break
+      default:
+        console.log('Company not found');
+    }
+  }
+  return companies;
+  }
